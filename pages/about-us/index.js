@@ -45,7 +45,7 @@ export default function About() {
             recompensas y opciones de leasing. Ofrecemos educación y capacitación 
             enfocada en mantener el bienestar de su negocio, incluidas alternativas de financiamiento y gestión de flujo de efectivo.
             <h2 className="mt-4 text-3xl font-bold text-black text-center sm:text-left sm:text-4xl">
-            Servicios de Marketing
+            Servicios de Marketing Digital
             </h2>
             A través de HM Brand, proveemos a nuestros partners soluciones de marketing para generar 
             clientes potenciales que se convierten en ventas. Diríjase a los usuarios finales con campañas dinámicas de marketing con generación de leads a través de eventos, marketing digital, telemarketing y mucho más para aumentar su visibilidad.
