@@ -13,7 +13,7 @@ const Footer = () => {
         <div>
             <div className="mt-20 mb-12 grid place-items-center grid-cols-1 gap-4 lg:grid-cols-4 md:grid-cols-2 sm:mt-12">
                 <div className="text-center md:text-left">
-                    <h2 title="DeliPat - Your Favourite Food Delivery Partner">
+                    <h2 title="DeliPat - Your Favourite hogar Delivery Partner">
                         <Link href="/">
                             <a className="flex flex-col justify-center items-center gap-0 w-max m-auto md:m-0">
                                 <MdOutlineDeliveryDining className="text-5xl text-rose-600" />

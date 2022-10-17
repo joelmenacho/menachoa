@@ -19,7 +19,7 @@ export default function ContactUs() {
         <div>
         <Head>
             <title>Contactos - Hogar Menacho</title>
-            <meta name="description" content="Responsive, clean and open source food delivery app using Next.js & Tailwind CSS." />
+            <meta name="description" content="Responsive, clean and open source hogar delivery app using Next.js & Tailwind CSS." />
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="p-3 max-w-7xl m-auto">

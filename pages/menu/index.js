@@ -9,8 +9,8 @@ import Footer from '../../components/Footer';
 // Scroll To Top Hook
 import useScrollTop from '../../Hooks/useScrollTop';
 
-// Featured Food
-import foods from '../../components/Featured-Food/data/data.js';
+// Featured hogar
+import hogars from '../../components/Featured-hogar/data/data.js';
 
 // Menu's
 import menus from '../../components/Menus-Data/data.js';
@@ -26,7 +26,7 @@ export default function Menu() {
     <div>
       <Head>
         <title>Ofertas de la semana</title>
-        <meta name="description" content="Responsive, clean and open source food delivery app using Next.js & Tailwind CSS." />
+        <meta name="description" content="Responsive, clean and open source hogar delivery app using Next.js & Tailwind CSS." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="p-3 max-w-7xl m-auto">
@@ -45,27 +45,27 @@ export default function Menu() {
             </p>
             <div className="my-12 grid place-items-center grid-cols-1 gap-4 md:grid-cols-3 sm:grid-cols-2">
                 {
-                    foods ? 
-                    foods.map((food, index) =>
-                        <div key={index} className="card relative bg-gray-200 rounded-xl overflow-hidden shadow-slate-900" title={food.title}>
+                    hogars ? 
+                    hogars.map((hogar, index) =>
+                        <div key={index} className="card relative bg-gray-200 rounded-xl overflow-hidden shadow-slate-900" title={hogar.title}>
                         <div className="absolute top-3 right-0 px-3 z-50">
                             <button className="bg-white text-sky-600 text-xl h-10 w-10 flex justify-center items-center rounded-md font-normal active:scale-95" title="Add To Cart">
                               <MdOutlineAddShoppingCart />
                             </button>
                         </div>
-                        <Link href={`/${food.route}`}>
+                        <Link href={`/${hogar.route}`}>
                             <a>
                             <div className="relative">
-                                <img src={food.image_url} alt="Food-Image" max-height="200px" width="100%" className="meal-img ease-in-out duration-300" />
+                                <img src={hogar.image_url} alt="hogar-Image" max-height="200px" width="100%" className="meal-img ease-in-out duration-300" />
                                 <div className="info absolute left-0 bottom-0 bg-sky-600 p-3 pb-4 ease-in-out duration-300 opacity-0">
                                 <h3 className="flex justify-between items-center text-xl font-semibold mb-1 text-white">
-                                    <span>{food.title}</span>
-                                    <span>${food.price}</span>
+                                    <span>{hogar.title}</span>
+                                    <span>${hogar.price}</span>
                                 </h3>
-                                <p className="text-sm text-gray-400 mb-2">{food.description}</p>
+                                <p className="text-sm text-gray-400 mb-2">{hogar.description}</p>
                                 <span className="text-xl text-yellow-600 flex items-center gap-1">
                                 {
-                                    Array.from({ length: food.rating }).map((_, index) => (
+                                    Array.from({ length: hogar.rating }).map((_, index) => (
                                     <MdStar key={index}/>
                                     ))
                                 }
@@ -94,7 +94,7 @@ export default function Menu() {
                         <Link href="">
                             <a>
                             <div className="relative">
-                                <img src={menu.image_url} alt="Food-Image" max-height="400px" width="100%" className="meal-img ease-in-out duration-300" />
+                                <img src={menu.image_url} alt="hogar-Image" max-height="400px" width="100%" className="meal-img ease-in-out duration-300" />
                                 <div className="info absolute left-0 bottom-0 bg-sky-600 p-3 pb-4 w-full ease-in-out duration-300 opacity-0">
                                 <h3 className="flex justify-between items-center text-md font-semibold mb-0 text-white sm:mb-2 sm:text-2xl">
                                     <span>{menu.title}</span>

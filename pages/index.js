@@ -4,7 +4,7 @@ import Head from 'next/head';
 // Components
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import FeaturedFood from '../components/Featured-Food';
+import Featured from "../components/Featured"
 import ServicesBanner from "../components/Services-Banner";
 import AboutUsBanner from "../components/AboutUs-Banner";
 import Subscription from "../components/Subscription";
@@ -27,7 +27,7 @@ export default function Home() {
       <div className="p-3 max-w-7xl m-auto">
         <Navbar />
         <Hero />
-        <FeaturedFood />
+        <Featured />
         <ServicesBanner />
         <AboutUsBanner />
         <Subscription />

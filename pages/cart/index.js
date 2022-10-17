@@ -42,7 +42,7 @@ export default function Cart() {
                     products.map((product, index) => 
                       <div key={index} className="relative bg-gray-200 rounded-xl overflow-hidden shadow-slate-900 border border-gray-200" title={product.title}>
                         <div className="">
-                            <img src={product.image_url} alt="Food-Image" max-height="200px" width="100%" className="ease-in-out duration-300" />
+                            <img src={product.image_url} alt="hogar-Image" max-height="200px" width="100%" className="ease-in-out duration-300" />
                             <div className="bg-white p-4 px-3 pb-4 ease-in-out duration-300">
                               <h3 className="mb-1">
                                   <Link href={`/${product.route}`}>

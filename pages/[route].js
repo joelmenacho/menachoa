@@ -7,8 +7,8 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-// Foods Data
-import foods from '../components/Featured-Food/data/data.js';
+// hogars Data
+import hogars from '../components/Featured/data/data.js';
 
 // Scroll To Top Hook
 import useScrollTop from '../Hooks/useScrollTop';
@@ -28,7 +28,7 @@ export default function Product() {
         <div>
         <Head>
             <title>
-                {foods.map((food) => product_query.route == food.route ? `${food.title} - HM` : null)}
+                {hogars.map((hogar) => product_query.route == hogar.route ? `${hogar.title} - HM` : null)}
             </title>
             <meta name="description" content="Elige un producto que cuente con Despecho a Domicilio, completa los datos de tu dirección y finaliza tu compra." />
             <link rel="icon" href="/favicon.ico" />
@@ -37,30 +37,30 @@ export default function Product() {
             <Navbar />
             <div className="mt-6 sm:mt-10">
                 {
-                    foods.map((food, index) => 
+                    hogars.map((hogar, index) => 
                         <div key={index}>
                             {
-                                product_query.route == food.route ?
+                                product_query.route == hogar.route ?
                                     <div className="grid gird-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-6 h-max">
                                         <div className="overflow-hidden rounded-xl">
-                                            <img src={food.image_url} alt="Product-Image" className=" w-full"/>
+                                            <img src={hogar.image_url} alt="Product-Image" className=" w-full"/>
                                         </div>
                                         <div className="flex flex-col justify-center">
                                             <h1 className="text-3xl text-rose-600 font-semibold sm:text-4xl">
-                                                {food.title}
+                                                {hogar.title}
                                             </h1>
                                             <p className="mt-3 text-gray-600 text-md leading-6 text-justify sm:text-left sm:mt-4">
-                                                {food.description}
+                                                {hogar.description}
                                             </p>
                                             <span className="my-3 text-xl text-yellow-600 flex items-center gap-1 sm:my-4">
                                                 {
-                                                    Array.from({ length: food.rating }).map((_, index) => (
+                                                    Array.from({ length: hogar.rating }).map((_, index) => (
                                                         <MdStar key={index}/>
                                                     ))
                                                 }
                                             </span>
                                             <span className="text-xl text-rose-600 font-semibold sm:text-2xl">
-                                                S/{food.price}
+                                                S/{hogar.price}
                                             </span>
                                         </div>
                                         <form className="flex flex-col justify-start items-center w-full m-auto" onSubmit={(e) => e.preventDefault()}>
@@ -112,27 +112,27 @@ export default function Product() {
             </h1>
             <div className="mt-10 grid place-items-center grid-cols-1 gap-4 md:grid-cols-3 sm:grid-cols-2">
                 {
-                    foods.map((food, index) =>
-                        product_query.route != food.route ?
-                            <div key={index} className="card relative bg-gray-50 rounded-xl overflow-hidden shadow-slate-900" title={food.title}>
+                    hogars.map((hogar, index) =>
+                        product_query.route != hogar.route ?
+                            <div key={index} className="card relative bg-gray-50 rounded-xl overflow-hidden shadow-slate-900" title={hogar.title}>
                                 <div className="absolute top-3 right-0 px-3 z-50">
                                     <button className="bg-white text-sky-600 text-xl h-10 w-10 flex justify-center items-center rounded-md font-normal active:scale-95" title="Add To Cart">
                                     <MdOutlineAddShoppingCart />
                                     </button>
                                 </div>
-                                <Link href={`/${food.route}`}>
+                                <Link href={`/${hogar.route}`}>
                                     <a>
                                     <div className="relative">
-                                        <img src={food.image_url} alt="Food-Image" max-height="200px" width="100%" className="meal-img ease-in-out duration-300" />
+                                        <img src={hogar.image_url} alt="hogar-Image" max-height="200px" width="100%" className="meal-img ease-in-out duration-300" />
                                         <div className="info absolute left-0 bottom-0 bg-sky-600 p-3 pb-4 ease-in-out duration-300 opacity-0">
                                         <h3 className="flex justify-between items-center text-xl font-semibold mb-1 text-white">
-                                            <span>{food.title}</span>
-                                            <span>S/{food.price}</span>
+                                            <span>{hogar.title}</span>
+                                            <span>S/{hogar.price}</span>
                                         </h3>
-                                        <p className="text-sm text-gray-50 mb-2">{food.description}</p>
+                                        <p className="text-sm text-gray-50 mb-2">{hogar.description}</p>
                                         <span className="text-xl text-yellow-600 flex items-center gap-1">
                                             {
-                                            Array.from({ length: food.rating }).map((_, index) => (
+                                            Array.from({ length: hogar.rating }).map((_, index) => (
                                                 <MdStar key={index}/>
                                             ))
                                             }
