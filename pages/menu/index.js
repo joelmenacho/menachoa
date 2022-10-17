@@ -10,7 +10,7 @@ import Footer from '../../components/Footer';
 import useScrollTop from '../../Hooks/useScrollTop';
 
 // Featured hogar
-import hogars from '../../components/Featured-hogar/data/data.js';
+import hogars from '../../components/Featured/data/data.js';
 
 // Menu's
 import menus from '../../components/Menus-Data/data.js';
